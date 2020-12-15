@@ -21,6 +21,11 @@ client.on('message', (message) =>{
 });
 client.on('message', (message) =>{
     console.log(`${message.author.tag} sent a dumbass message`)
+    if (message.content === 'bye')
+    message.reply('get fucked, loser.')
+});
+client.on('message', (message) =>{
+    console.log(`${message.author.tag} sent a dumbass message`)
     if (message.content === 'Matt is cool')
     message.reply('fuckin a bud')
 });
