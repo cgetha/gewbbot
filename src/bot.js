@@ -1,7 +1,6 @@
 require('dotenv').config();
 
 const { Client, Message } = require('discord.js');
-const { fstat } = require('fs');
 const { error } = require('console');
 const client = new Client();
 const PREFIX = "$";
@@ -9,16 +8,20 @@ const PREFIX = "$";
 client.on('ready', () => {
     console.log(`${client.user.tag} has logged in`)
 });
-client.on('message', (message) =>{
-    fs.writeFile('output.txt', message.content, error)
-    return;
-});
 
+client.on('message', (message) =>{
+    if (message.author.bot) return;
+    if (message.content.includes('fuck'))
+    message.reply('watch your fucking mouth')
+});
 client.on('message', (message) =>{
     console.log(`${message.author.tag} sent a dumbass message`)
     if (message.content === 'hello')
     message.reply('fuck you asshole')
 });
+/* 
+dont forget to comment ur worthless stuff
+*/
 client.on('message', (message) =>{
     console.log(`${message.author.tag} sent a dumbass message`)
     if (message.content === 'bye')
@@ -49,4 +52,4 @@ client.on('message', (message) =>{
 });
 
 
-client.login(process.env.DISCORDJS_BOT_TOKEN)
+client.login(process.env.TOKEN)
