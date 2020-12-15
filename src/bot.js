@@ -12,7 +12,7 @@ client.on('ready', () => {
 });
 client.on('message', (message) =>{
     if (message.author.bot) return;
-    fs.appendFile('output.txt', message.content + " " + message.author.tag, error)
+    fs.appendFile('output.txt',"\n" + message.content + " : " + message.author.tag + "\n", error)
 });
 client.on('message', (message) =>{
     if (message.author.bot) return;
