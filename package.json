@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@discordjs/opus": "^0.3.3",
+    "@mysql/xdevapi": "8.0.22",
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0"
   }
