@@ -80,7 +80,7 @@ client.on('message', (message) =>{ /* bye response */
 client.on('message', (message) =>{
     console.log(`${message.author.tag} sent a dumbass message`)
     if (message.content.includes('matt'))
-    message.reply('fuckin a right bud')
+    message.reply('friggin a right bud, go jackets!')
 });
 
 
