@@ -6,7 +6,7 @@ const { error } = require('console');
 const client = new Client();
 const PREFIX = "$";
 var list = [
-    "you fuckin wanka", 
+    "you wanka", 
     "ur not my dad", 
     "come at me bro", 
     "barry's hand dude"
@@ -27,15 +27,10 @@ client.on('message', (message) =>{
 client.on('message', (message) =>{
     if (message.author.bot) return;
     if (message.content.includes('fuck'))
-    message.reply('watch your fucking mouth asshole.')
+    message.reply('watch your mouth, there are kids in here. Ear muffs Stove, ear muffs.')
 });
 
 
-client.on('message', (message) =>{ /* weed is tight */
-    if (message.author.bot) return;
-    if (message.content.includes('weed'))
-    message.reply('weed is tight bro, weed is tight.')
-});
 
 
 client.on('message', (message) =>{
@@ -47,7 +42,7 @@ client.on('message', (message) =>{
 
 client.on('message', (message) =>{
     if (message.content === 'hello')
-    message.reply('fuck you asshole');
+    message.reply('hi cutie :)');
 });
 
 
@@ -71,14 +66,14 @@ dont forget to comment ur worthless stuff
 
 
 client.on('message', (message) =>{ /* bye response */
-    console.log(`${message.author.tag} sent a dumbass message`)
+    console.log(`${message.author.tag} sent a message`)
     if (message.content === 'bye')
-    message.reply('get fucked, loser.')
+    message.reply('get bent, loser.')
 });
 
 
 client.on('message', (message) =>{
-    console.log(`${message.author.tag} sent a dumbass message`)
+    console.log(`${message.author.tag} sent a message`)
     if (message.content.includes('matt'))
     message.reply('friggin a right bud, go jackets!')
 });
@@ -86,7 +81,7 @@ client.on('message', (message) =>{
 
 client.on('message', (message) =>{ /* Chad response */
     if (message.author.bot) return;
-    console.log(`${message.author.tag} sent a dumbass message`)
+    console.log(`${message.author.tag} sent a message`)
     if (message.content.includes('Tyler'))
     message.reply('Tyler? Did you mean Chad?')
 });
