@@ -15,13 +15,11 @@ var holja = {
     attitude: "toxic",
     skills: "minimal",
     beerdrinking: "limited"
-
 }
 var jon = {
     attitude: "super chill",
     skills: "decent",
     beerdrinking: "expert"
-
 }
 
 client.on('ready', function () {
@@ -32,6 +30,14 @@ client.on('message', (message) =>{
     if (message.author.bot) return;
     if (message.content.includes('fuck'))
     message.reply('watch your mouth, there are kids in here. Ear muffs Stove, ear muffs.')
+});
+
+client.on('message', (message) =>{
+    if (message.author.bot) return;
+    if (message.content.includes('jon')) {
+        text = JSON.stringify(jon)
+        message.channel.send(text)
+    }
 });
 
 client.on('message', (message) =>{
