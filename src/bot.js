@@ -59,13 +59,7 @@ client.on('message', (message) =>{
     }
 });
 
-
-/* 
-dont forget to comment ur worthless stuff
-*/
-
-
-client.on('message', (message) =>{ /* bye response */
+client.on('message', (message) =>{ 
     console.log(`${message.author.tag} sent a message`)
     if (message.content === 'bye')
     message.reply('get bent, loser.')
@@ -79,7 +73,7 @@ client.on('message', (message) =>{
 });
 
 
-client.on('message', (message) =>{ /* Chad response */
+client.on('message', (message) =>{ 
     if (message.author.bot) return;
     console.log(`${message.author.tag} sent a message`)
     if (message.content.includes('Tyler'))
@@ -87,7 +81,7 @@ client.on('message', (message) =>{ /* Chad response */
 });
 
 
-client.on('message', (message) =>{ /* Array Destructure & PREFIX implementation */
+client.on('message', (message) =>{ 
     if (message.author.bot) return;
     if (message.content.startsWith(PREFIX)) {
         const [CMD_NAME, ...args ] = message.content
