@@ -11,16 +11,23 @@ var list = [
     "come at me bro", 
     "barry's hand dude"
 ]
+var holja = {
+    attitude: "toxic",
+    skills: "minimal",
+    beerdrinking: "limited"
+
+}
+var jon = {
+    attitude: "super chill",
+    skills: "decent",
+    beerdrinking: "expert"
+
+}
+
 
 
 client.on('ready', function () {
-        console.log(`${client.user.tag} has logged in`);
-    });
-
-
-client.on('message', (message) =>{
-    if (message.author.bot) return;
-    fs.appendFile('output.txt',`\n ${message.content} \n`, error)
+    console.log(`${client.user.tag} has logged in`);
 });
 
 
@@ -36,7 +43,7 @@ client.on('message', (message) =>{
 client.on('message', (message) =>{
     if (message.author.bot) return;
     if (message.content.includes('steve'))
-        message.channel.send('<@142454868806729728> THE Professional Jon Simp');
+        message.channel.send('THE Professional Jon Simp');
 });
 
 
@@ -94,6 +101,20 @@ client.on('message', (message) =>{
         }
     }
 });
+
+client.on('message', (message) =>{
+    if (message.content.startsWith(PREFIX)) {
+    const [CMD_NAME, ...args ] = message.content
+        .trim()
+        .substring(PREFIX.length)
+        .split(/\s+/);
+
+        if (CMD_NAME === 'holja'){    
+        message.channel.send(holja.size);
+        }
+    }   
+});
+
 
 
 client.on('message', (message) =>{ /* Array Destructure & PREFIX implementation */
