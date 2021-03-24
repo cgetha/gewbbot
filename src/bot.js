@@ -24,12 +24,9 @@ var jon = {
 
 }
 
-
-
 client.on('ready', function () {
     console.log(`${client.user.tag} has logged in`);
 });
-
 
 client.on('message', (message) =>{
     if (message.author.bot) return;
@@ -37,26 +34,20 @@ client.on('message', (message) =>{
     message.reply('watch your mouth, there are kids in here. Ear muffs Stove, ear muffs.')
 });
 
-
-
-
 client.on('message', (message) =>{
     if (message.author.bot) return;
     if (message.content.includes('steve'))
         message.channel.send('THE Professional Jon Simp');
 });
 
-
 client.on('message', (message) =>{
     if (message.content === 'hello')
     message.reply('hi cutie :)');
 });
 
-
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
   }
-
 
 var selection = getRandomInt(list.length);
 client.on('message', (message) =>{
@@ -87,7 +78,6 @@ client.on('message', (message) =>{
     message.reply('Tyler? Did you mean Chad?')
 });
 
-
 client.on('message', (message) =>{ 
     if (message.author.bot) return;
     if (message.content.startsWith(PREFIX)) {
@@ -115,8 +105,6 @@ client.on('message', (message) =>{
     }   
 });
 
-
-
 client.on('message', (message) =>{ /* Array Destructure & PREFIX implementation */
     if (message.author.bot) return;
     if (message.content.startsWith(PREFIX)) {
@@ -131,7 +119,6 @@ client.on('message', (message) =>{ /* Array Destructure & PREFIX implementation 
     }
 });
 
-
 client.on('message', (message) =>{ /* Array Destructure & PREFIX implementation */
     if (message.author.bot) return;
     if (message.content.startsWith(PREFIX)) {
@@ -145,6 +132,5 @@ client.on('message', (message) =>{ /* Array Destructure & PREFIX implementation 
         }
     }
 });
-
 
 client.login(process.env.TOKEN)
