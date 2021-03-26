@@ -6,20 +6,40 @@ const { error } = require('console');
 const client = new Client();
 const PREFIX = "$";
 var list = [
-    "you wanka", 
-    "ur not my dad", 
-    "come at me bro", 
-    "barry's hand dude"
+    "sorry gotta go simp", 
+    "teddy stop biting me", 
+    "21 Savage is so good", 
+    "Thats some WAP"
 ]
-var holja = {
-    attitude: "toxic",
-    skills: "minimal",
-    beerdrinking: "limited"
+var holja = {  
+    name: "holja",
+    top_game: "battlerite",
+    beerdrinking: "average",
+    will_die_for_you: "for gewb"
 }
 var jon = {
     attitude: "super chill",
     skills: "decent",
-    beerdrinking: "expert"
+    beerdrinking: "expert",
+    would_die_for_you: "in a video game, then bitch about it."
+}
+var gewb =  {
+    name: "kc",
+    skills: "undefined",
+    beerdrinking: "retired due to health",
+    would_die_for_you: "who's asking?"
+}
+var matt =  {
+    name: "mote",
+    skills: "expert mountain biker",
+    beerdrinking: "unknown",
+    would_die_for_you: "are you WoW?"
+}
+var steve =  {
+    name: "stove",
+    skills: "expert weed smoker",
+    beerdrinking: "see above",
+    would_die_for_you: "for house stewb"
 }
 
 client.on('ready', function () {
@@ -28,115 +48,61 @@ client.on('ready', function () {
 
 client.on('message', (message) =>{
     if (message.author.bot) return;
-    if (message.content.includes('fuck'))
-    message.reply('watch your mouth, there are kids in here. Ear muffs Stove, ear muffs.')
-});
+    if (message.content.startsWith(PREFIX)) {
+       const [CMD_NAME, ...args ] = message.content
+        .trim()
+        .substring(PREFIX.length)
+        .split(/\s+/);
 
-client.on('message', (message) =>{
-    if (message.author.bot) return;
-    if (message.content.includes('jon')) {
-        text = JSON.stringify(jon)
-        message.channel.send(text)
+        if (CMD_NAME === 'jon') {
+
+            text = JSON.stringify(jon, null, 1)
+            facts = ("```" + text + "```")
+            message.channel.send(facts)
+
+        } else if (CMD_NAME === 'blaize') {
+
+            text = JSON.stringify(holja, null, 1)
+            facts = ("```" + text + "```")
+            message.channel.send(facts)
+
+        } else if (CMD_NAME == 'gewb') {
+
+            text = JSON.stringify(gewb, null, 1)
+            facts = ("```" + text + "```")
+            message.channel.send(facts) 
+
+        } else if (CMD_NAME == 'matt') {
+
+            text = JSON.stringify(matt, null, 1)
+            facts = ("```" + text + "```")
+            message.channel.send(facts) 
+
+        } else if (CMD_NAME == 'steve') {
+
+            text = JSON.stringify(steve, null, 1)
+            facts = ("```" + text + "```")
+            message.channel.send(facts) 
+        }
     }
-});
 
-client.on('message', (message) =>{
-    if (message.author.bot) return;
-    if (message.content.includes('steve'))
-        message.channel.send('THE Professional Jon Simp');
-});
 
-client.on('message', (message) =>{
-    if (message.content === 'hello')
-    message.reply('hi cutie :)');
-});
-
-function getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max));
-  }
-
-var selection = getRandomInt(list.length);
-client.on('message', (message) =>{
-    if (message.author.bot) return;
-    if (message.content === 'holja'){
-        message.reply(list[selection])
+    if (message.content.includes('taco')) {
+        message.channel.send('and some Margaritas :)');
     }
-});
 
-client.on('message', (message) =>{ 
-    console.log(`${message.author.tag} sent a message`)
-    if (message.content === 'bye')
-    message.reply('get bent, loser.')
-});
-
-
-client.on('message', (message) =>{
-    console.log(`${message.author.tag} sent a message`)
-    if (message.content.includes('matt'))
-    message.reply('friggin a right bud, go jackets!')
-});
-
-
-client.on('message', (message) =>{ 
-    if (message.author.bot) return;
-    console.log(`${message.author.tag} sent a message`)
-    if (message.content.includes('Tyler'))
-    message.reply('Tyler? Did you mean Chad?')
-});
-
-client.on('message', (message) =>{ 
-    if (message.author.bot) return;
     if (message.content.startsWith(PREFIX)) {
         const [CMD_NAME, ...args ] = message.content
-        .trim()
-        .substring(PREFIX.length)
-        .split(/\s+/);
-
-        if (CMD_NAME === 'big'){
-        message.channel.send('Sad');
+            .trim()
+            .substring(PREFIX.length)
+            .split(/\s+/);
+    
+            if (CMD_NAME === 'love'){
+            message.channel.send("https://tenor.com/view/ha-gay-yeah-right-ha-yeah-ha-hayyyy-gif-11812798");
+            }
         }
-    }
+
 });
 
-client.on('message', (message) =>{
-    if (message.content.startsWith(PREFIX)) {
-    const [CMD_NAME, ...args ] = message.content
-        .trim()
-        .substring(PREFIX.length)
-        .split(/\s+/);
-
-        if (CMD_NAME === 'holja'){    
-        message.channel.send(holja.size);
-        }
-    }   
-});
-
-client.on('message', (message) =>{ /* Array Destructure & PREFIX implementation */
-    if (message.author.bot) return;
-    if (message.content.startsWith(PREFIX)) {
-        const [CMD_NAME, ...args ] = message.content
-        .trim()
-        .substring(PREFIX.length)
-        .split(/\s+/);
-
-        if (CMD_NAME === 'dif'){
-        message.channel.send('https://www.youtube.com/watch?v=e2QKlmMT8II');
-        }
-    }
-});
-
-client.on('message', (message) =>{ /* Array Destructure & PREFIX implementation */
-    if (message.author.bot) return;
-    if (message.content.startsWith(PREFIX)) {
-        const [CMD_NAME, ...args ] = message.content
-        .trim()
-        .substring(PREFIX.length)
-        .split(/\s+/);
-
-        if (CMD_NAME === 'love'){
-        message.channel.send("https://tenor.com/view/ha-gay-yeah-right-ha-yeah-ha-hayyyy-gif-11812798");
-        }
-    }
-});
 
 client.login(process.env.TOKEN)
