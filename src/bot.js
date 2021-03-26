@@ -83,12 +83,22 @@ client.on('message', (message) =>{
             text = JSON.stringify(steve, null, 1)
             facts = ("```" + text + "```")
             message.channel.send(facts) 
+        } else if (CMD_NAME === 'love'){
+            message.channel.send("https://tenor.com/view/ha-gay-yeah-right-ha-yeah-ha-hayyyy-gif-11812798");
         }
     }
 
 
     if (message.content.includes('taco')) {
         message.channel.send('and some Margaritas :)');
+    }
+    
+    if (message.content.includes('tom brady')) {
+        message.channel.reply('stop simping already');
+    }
+
+    if (message.content.includes('pizza')) {
+        message.channel.reply('one bite');
     }
 
     if (message.content.startsWith(PREFIX)) {
