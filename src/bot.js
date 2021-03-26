@@ -88,11 +88,12 @@ client.on('message', (message) =>{
         }
     }
 
+// EASTER EGG RESPONSES
 
     if (message.content.includes('taco')) {
         message.channel.send('and some Margaritas :)');
     }
-    
+
     if (message.content.includes('tom brady')) {
         message.channel.reply('stop simping already');
     }
@@ -101,18 +102,6 @@ client.on('message', (message) =>{
         message.channel.reply('one bite');
     }
 
-    if (message.content.startsWith(PREFIX)) {
-        const [CMD_NAME, ...args ] = message.content
-            .trim()
-            .substring(PREFIX.length)
-            .split(/\s+/);
-    
-            if (CMD_NAME === 'love'){
-            message.channel.send("https://tenor.com/view/ha-gay-yeah-right-ha-yeah-ha-hayyyy-gif-11812798");
-            }
-        }
-
 });
-
 
 client.login(process.env.TOKEN)
