@@ -15,6 +15,7 @@
     "@discordjs/opus": "^0.3.3",
     "@mysql/xdevapi": "8.0.22",
     "discord.js": "^12.5.1",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "heroku": "^7.51.0"
   }
 }

@@ -5,12 +5,7 @@ const { Client, Message } = require('discord.js');
 const { error } = require('console');
 const client = new Client();
 const PREFIX = "$";
-var list = [
-    "sorry gotta go simp", 
-    "teddy stop biting me", 
-    "21 Savage is so good", 
-    "Thats some WAP"
-]
+
 var holja = {  
     name: "holja",
     top_game: "battlerite",
