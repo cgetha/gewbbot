@@ -90,11 +90,11 @@ client.on('message', (message) =>{
     }
 
     if (message.content.includes('tom brady')) {
-        message.channel.reply('stop simping already');
+        message.channel.send('stop simping already');
     }
 
     if (message.content.includes('pizza')) {
-        message.channel.reply('one bite');
+        message.channel.send('one bite');
     }
 
 });
